@@ -1,0 +1,28 @@
+from random import randint
+
+def main():
+    while True:
+        try:
+            level = int(input("Level: "))
+            if level > 0:
+                break
+        except ValueError:
+            pass
+
+    secret_number = randint(1, level)
+    while True:
+        try:
+            guess = int(input("Guess: "))
+            if guess <= 0:
+                raise ValueError
+
+            if guess < secret_number:
+                print("Too small!")
+            elif guess > secret_number:
+                print("Too large!")
+            else:
+                print("Just right!")
+                break
+        except ValueError:
+            pass
+main()
