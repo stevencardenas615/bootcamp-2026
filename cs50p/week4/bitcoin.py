@@ -13,7 +13,7 @@ try:
     data = response.json()
     bitcoin_price = float(data["data"]["priceUsd"])
 except requests.RequestException:
-    print("KEY REQUEST FAILED")
+    sys.exit("KEY REQUEST FAILED")
 
 total_bitcoin_price = bitcoin_price * bitcoins
 print(f"${total_bitcoin_price:,.4f}")

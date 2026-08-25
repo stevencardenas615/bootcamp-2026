@@ -13,8 +13,9 @@ def main():
             print(f"Adieu, adieu, to {names[0]} and {names[1]}")
         else:
             farewell = "Adieu, adieu, to "
-            for n in names:
-                if n == (names[len(names)-1]):
+            for i in range(len(names)):
+                n = names[i]
+                if i == len(names) - 1:
                     farewell = farewell + "and " + n
                     print(farewell)
                     return
