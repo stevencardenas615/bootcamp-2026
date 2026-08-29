@@ -11,3 +11,5 @@ CS50P Week 3 complete: all 4 exceptions problems passing check50.
 CS50P Week 4 complete: all 6 problems passing check50.
 ## 2026-08-27 — Sprint Wk 3 · CS50P Wk 5 (Unit Tests)
 CS50P Week 5 complete: all 4 problems passing check50.
+## 2026-08-29 — Sprint Wk 3 · CS50P Wk 6 (File I/O)
+CS50P Week 6 complete: all 4 problems passing check50.
