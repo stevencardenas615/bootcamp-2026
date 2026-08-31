@@ -1,0 +1,1 @@
+- Learn it Yourself ML curriculum (https://lachinemearning.com/course.html) - revisit after Nov 1
