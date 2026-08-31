@@ -33,7 +33,12 @@ def convert(s):
 
     if p1 == "PM" and h1 != 12:
         h1 = h1 + 12
-    elif p1 == "AM" and h2 == 12:
+    elif p1 == "AM" and h1 == 12:
+        h1 = 0
+
+    if p2 == "PM" and h2 != 12:
+        h2 = h2 + 12
+    elif p2 == "AM" and h2 == 12:
         h2 = 0
 
     return f"{h1:02}:{m1:02} to {h2:02}:{m2:02}"

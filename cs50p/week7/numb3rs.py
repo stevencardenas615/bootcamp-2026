@@ -6,7 +6,7 @@ def main():
 
 def validate(ip):
     octet = r"([0-9]|[1-9][0-9]*)"
-    pattern = r"^{octet}\.{octet}\.{octet}\.{octet}$"
+    pattern = rf"^{octet}\.{octet}\.{octet}\.{octet}$"
     match = re.search(pattern, ip.strip())
 
     if not match:
