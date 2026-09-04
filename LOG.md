@@ -15,3 +15,5 @@ CS50P Week 5 complete: all 4 problems passing check50.
 CS50P Week 6 complete: all 4 problems passing check50.
 ## 2026-08-30 — Sprint Wk 3 · CS50P Wk 7 (Regex)
 CS50P Week 7 complete: all 5 problems passing check50.
+## 2026-09-03 — Sprint Wk 4 · CS50P Wk 8 (OOP)
+CS50P Week 8 complete: all 3 problems passing check50.
