@@ -6,3 +6,4 @@ venv/
 .DS_Store
 CLAUDE.md
 sprint-playbook-v3.md
+*.db
