@@ -17,3 +17,9 @@ CS50P Week 6 complete: all 4 problems passing check50.
 CS50P Week 7 complete: all 5 problems passing check50.
 ## 2026-09-03 — Sprint Wk 4 · CS50P Wk 8 (OOP)
 CS50P Week 8 complete: all 3 problems passing check50.
+CS50P COMPLETED
+
+## 2026-09-04 - Finance_CLI Project Day 1
+Started on the Finance_CLI Project, as my first portfolio projec, previous day planned on paper on how and what the project should behave.
+
+Worked with SQLite persistence, category enum, and a simple/early pull output format.
