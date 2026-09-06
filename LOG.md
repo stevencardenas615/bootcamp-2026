@@ -22,4 +22,9 @@ CS50P COMPLETED
 ## 2026-09-04 - Finance_CLI Project Day 1
 Started on the Finance_CLI Project, as my first portfolio projec, previous day planned on paper on how and what the project should behave.
 
-Worked with SQLite persistence, category enum, and a simple/early pull output format.
+Worked with SQLite persistence, category enum, and a simple/early pull command that outputs.
+
+## 2026-09-05 - Finance_CLI Project Day 2
+Fixed five bugs from the first attempt, removed ALL from the category enum, refactored four hardcoded query branches that were too long into one dynamic query builder, in doing so working on my first list comprehensions and finally I fixed date filtering from being silently ignore when no category was given. 
+
+Pull now handels every filter combination through on path, adding more are single lines moving forward.
