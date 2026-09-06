@@ -25,7 +25,7 @@ def db_disconnect(connector):
     connector.close()
    
 @app.command()
-def add(amount: float, category: AllowedCategory, date: datetime = None, note: str = ""):
+def add(amount: float, category: AllowedCategory, date: datetime | None = None, note: str = ""):
     conn, cursor = db_connect("transactions.db")
 
     if date is None:
@@ -37,10 +37,26 @@ def add(amount: float, category: AllowedCategory, date: datetime = None, note: s
     db_disconnect(conn)
 
 @app.command()
-def pull():
+def pull(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None):
     conn, cursor = db_connect("transactions.db")
-    history = cursor.execute("SELECT * FROM history ORDER BY date DESC").fetchall()
 
+    filters = [
+        ("category = ?", choice.value if choice else None, choice is not None),
+        ("date >= ?", start.strftime("%Y-%m-%d") if start else None, start is not None),
+        ("date <= ?", end.strftime("%Y-%m-%d") if end else None, end is not None)
+        ]
+
+    where_prompts = [sql for sql, val, active in filters if active]
+    parameters = [val for sql, val, active in filters if active]
+
+    query = "SELECT * FROM history"
+
+    if where_prompts:
+        query += " WHERE " + " AND ".join(where_prompts)
+    query += " ORDER BY date DESC"
+
+    history = cursor.execute(query, parameters).fetchall()
+                    
     if not history:
         print("No Transaction")
     else:
@@ -50,6 +66,8 @@ def pull():
                 print(f" | Note: {row[3]}")
             else:
                 print("")
+
+    db_disconnect(conn)
 
         
 if __name__ == "__main__":
