@@ -17,16 +17,16 @@ class AllowedCategory(str, Enum):
     HEALTHCARE = "healthcare"
     MISC = "misc"
 
-def db_connect(database_file):
+def db_connect(database_file: str | Path,) -> tuple[sqlite3.Connection, sqlite3.Cursor]:
     conn = sqlite3.connect(database_file)
     conn.execute("CREATE TABLE IF NOT EXISTS history (amount REAL, category TEXT, date TEXT, note TEXT)")
     return conn, conn.cursor()
 
-def db_disconnect(connector):
+def db_disconnect(connector: sqlite3.Connection) -> None:
     connector.commit()
     connector.close()
 
-def search_builder(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None):
+def search_builder(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None) -> tuple[list[str], list[str]]:
     
     filters = [
         ("category = ?", choice.value if choice else None, choice is not None),
@@ -40,7 +40,7 @@ def search_builder(choice: AllowedCategory | None = None, start: datetime | None
     return where_prompts, parameters
    
 @app.command()
-def add(amount: float, category: AllowedCategory, date: datetime | None = None, note: str = ""):
+def add(amount: float, category: AllowedCategory, date: datetime | None = None, note: str = "") -> None:
     conn, cursor = db_connect("transactions.db")
 
     if date is None:
@@ -52,7 +52,7 @@ def add(amount: float, category: AllowedCategory, date: datetime | None = None, 
     db_disconnect(conn)
 
 @app.command()
-def pull(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None):
+def pull(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None) -> None:
     conn, cursor = db_connect("transactions.db")
 
     where_prompts, parameters = search_builder(choice, start, end)
@@ -77,7 +77,7 @@ def pull(choice: AllowedCategory | None = None, start: datetime | None = None, e
     db_disconnect(conn)
 
 @app.command()
-def summary(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None):
+def summary(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None) -> None:
     conn, cursor = db_connect("transactions.db")
 
     where_prompts, parameters = search_builder(choice, start, end)
@@ -103,7 +103,7 @@ def summary(choice: AllowedCategory | None = None, start: datetime | None = None
     db_disconnect(conn)
 
 @app.command()
-def export_history(filename: str, choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None):
+def export_history(filename: str, choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None) -> None:
 
     conn, cursor = db_connect("transactions.db")
 
@@ -124,7 +124,7 @@ def export_history(filename: str, choice: AllowedCategory | None = None, start: 
             writer.writerow({"amount": row[0], "category": row[1], "date": row[2], "note": row[3]})
 
 @app.command()
-def import_history(filename: Path):
+def import_history(filename: Path) -> None:
     if not  filename.exists():
         print(f"Error: File '{filename}' does not exist.")
         raise typer.Exit(code=1)
