@@ -3,6 +3,8 @@ from datetime import datetime
 import sqlite3
 from enum import Enum
 from contextlib import closing
+import csv
+from pathlib import Path
 
 app = typer.Typer()
 
@@ -99,6 +101,69 @@ def summary(choice: AllowedCategory | None = None, start: datetime | None = None
         print(f"TOTAL: ${sum(total):.2f}")
 
     db_disconnect(conn)
+
+@app.command()
+def export_history(filename: str, choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None):
+
+    conn, cursor = db_connect("transactions.db")
+
+    where_prompts, parameters = search_builder(choice, start, end)
+
+    query = "SELECT * FROM history"
+    if where_prompts:
+        query += " WHERE " + " AND ".join(where_prompts)
+    query += " ORDER BY date DESC"
+
+    history = cursor.execute(query, parameters).fetchall()
+
         
+    with open(filename, "w", newline="") as file:
+        writer = csv.DictWriter(file, fieldnames = ["amount", "category", "date", "note"])
+        writer.writeheader()
+        for row in history:
+            writer.writerow({"amount": row[0], "category": row[1], "date": row[2], "note": row[3]})
+
+@app.command()
+def import_history(filename: Path):
+    if not  filename.exists():
+        print(f"Error: File '{filename}' does not exist.")
+        raise typer.Exit(code=1)
+
+    conn, cursor = db_connect("transactions.db")
+
+    success_count = 0
+    failed_rows = []
+
+    with open(filename, "r") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            current_line = reader.line_num
+            try:
+                raw_amount = row["amount"]
+                raw_category = row["category"]
+                raw_date = row["date"]
+                note = row.get("note", "").strip()
+
+                amount = float(raw_amount)
+                valid_date = datetime.strptime(raw_date, "%Y-%m-%d")
+                date_str = valid_date.strftime("%Y-%m-%d")
+
+                if raw_category not in [item.value for item in AllowedCategory]:
+                    raise ValueError("Incorrect Category")
+
+                cursor.execute("INSERT INTO history (amount, category, date, note) VALUES (?, ?, ?, ?)", (amount, raw_category, date_str, note))
+                success_count += 1
+            except (KeyError, ValueError, TypeError) as error:
+                failed_rows.append(f"Line {current_line}: Error {error} | Data: {dict(row)}")
+                continue
+
+    db_disconnect(conn)
+    print(f"Successfully Imported: {success_count} rows")
+    print(f"Skipped (BAD INPUT): {len(failed_rows)} rows")
+    if failed_rows:
+        print("Failed Rows:")
+        for failure in failed_rows:
+            print(failure)
+
 if __name__ == "__main__":
     app()
