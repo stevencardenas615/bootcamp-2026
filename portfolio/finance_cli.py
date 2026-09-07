@@ -2,11 +2,12 @@ import typer
 from datetime import datetime
 import sqlite3
 from enum import Enum
-from contextlib import closing
 import csv
 from pathlib import Path
 
 app = typer.Typer()
+
+user_database = "transactions.db"
 
 class AllowedCategory(str, Enum):
     RENT = "rent"
@@ -41,7 +42,7 @@ def search_builder(choice: AllowedCategory | None = None, start: datetime | None
    
 @app.command()
 def add(amount: float, category: AllowedCategory, date: datetime | None = None, note: str = "") -> None:
-    conn, cursor = db_connect("transactions.db")
+    conn, cursor = db_connect(user_database)
 
     if date is None:
         date = datetime.now()
@@ -53,7 +54,7 @@ def add(amount: float, category: AllowedCategory, date: datetime | None = None, 
 
 @app.command()
 def pull(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None) -> None:
-    conn, cursor = db_connect("transactions.db")
+    conn, cursor = db_connect(user_database)
 
     where_prompts, parameters = search_builder(choice, start, end)
 
@@ -78,7 +79,7 @@ def pull(choice: AllowedCategory | None = None, start: datetime | None = None, e
 
 @app.command()
 def summary(choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None) -> None:
-    conn, cursor = db_connect("transactions.db")
+    conn, cursor = db_connect(user_database)
 
     where_prompts, parameters = search_builder(choice, start, end)
 
@@ -105,7 +106,7 @@ def summary(choice: AllowedCategory | None = None, start: datetime | None = None
 @app.command()
 def export_history(filename: str, choice: AllowedCategory | None = None, start: datetime | None = None, end: datetime | None = None) -> None:
 
-    conn, cursor = db_connect("transactions.db")
+    conn, cursor = db_connect(user_database)
 
     where_prompts, parameters = search_builder(choice, start, end)
 
@@ -123,13 +124,15 @@ def export_history(filename: str, choice: AllowedCategory | None = None, start: 
         for row in history:
             writer.writerow({"amount": row[0], "category": row[1], "date": row[2], "note": row[3]})
 
+    db_disconnect(conn)
+
 @app.command()
 def import_history(filename: Path) -> None:
     if not  filename.exists():
         print(f"Error: File '{filename}' does not exist.")
         raise typer.Exit(code=1)
 
-    conn, cursor = db_connect("transactions.db")
+    conn, cursor = db_connect(user_database)
 
     success_count = 0
     failed_rows = []
