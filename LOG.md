@@ -83,3 +83,6 @@ and the DSA thread begins at 5 problems/week.
 
 ## 2026-09-09 — Sprint Wk 5 ·
 - Mid-day classes finished Git Remote problem sets, playbook merge
+
+## 2026-09-09 — Sprint Wk 5 · Git deep-dive
+- Git Deep dive, separated Finance CLI intwo its own repo and then removed the files from the bootcamp repo.
