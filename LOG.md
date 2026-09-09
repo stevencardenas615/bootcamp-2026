@@ -77,3 +77,9 @@ Written unaided, no notes or help.
 
 **Phase B starts:** Sprint week 5 — Git deep-dive, SQL + Postgres on the VPS,
 and the DSA thread begins at 5 problems/week.
+
+## 2026-09-08 — Sprint Wk 5 ·
+- Practiced Git branching and went for my 3PM AI + Optimization Internship Interview
+
+## 2026-09-09 — Sprint Wk 5 ·
+- Mid-day classes finished Git Remote problem sets, playbook merge
