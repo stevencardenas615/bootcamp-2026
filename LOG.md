@@ -86,3 +86,9 @@ and the DSA thread begins at 5 problems/week.
 
 ## 2026-09-09 — Sprint Wk 5 · Git deep-dive
 - Git Deep dive, separated Finance CLI intwo its own repo and then removed the files from the bootcamp repo.
+
+## 2026-09-10 — Sprint Wk 5 · Internship Results
+- Got an email offer back from the internship in my area, really excited and will be taking it.
+
+## 2026-09-11 — Sprint Wk 5 · Cloud Computing Assignments + AWS Academy Ch1 + 2
+- Worked on my assignments and on another learning quest (AWS) that's going to be alongside my bootcamp for now to further push myself
