@@ -92,3 +92,14 @@ and the DSA thread begins at 5 problems/week.
 
 ## 2026-09-11 — Sprint Wk 5 · Cloud Computing Assignments + AWS Academy Ch1 + 2
 - Worked on my assignments and on another learning quest (AWS) that's going to be alongside my bootcamp for now to further push myself
+
+## 2026-09-13 — Sprint Wk 5 · Postgres + DSA · Week 5 close
+
+- SQL refresher: JOINs, keys/constraints, indexes, normalization (pgexercises)
+- SSH keys set up for the VPS — ed25519, key-only login working, `ssh vps` alias
+- Postgres 16 installed on the VPS, `steven` role + `inventory` database created, localhost-only, connected from laptop through an SSH tunnel with psycopg
+- DSA 5/5: Two Sum, Valid Anagram, Contains Duplicate, First Unique Char, Best Time to Buy/Sell Stock, I'm pushing to wk 6: Inventory API schema by hand
+
+**Week 5 done:** Git deep-dive, PR cycle, finance-cli split to its own repo,
+SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
+6 Builder Center badges.
