@@ -103,3 +103,16 @@ and the DSA thread begins at 5 problems/week.
 **Week 5 done:** Git deep-dive, PR cycle, finance-cli split to its own repo,
 SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
 6 Builder Center badges.
+
+## 2026-09-15 — Sprint Wk 6 · Schema + FastAPI
+- Designed the Inventory API schema by hand — users, manifests, products; NUMERIC for money, CHECK on status, three indexes. Committed as schema.md on repo
+- FastAPI tutorial: First Steps through Request Body / Pydantic. uv set up, fastapi-practice test running to understand
+
+## 2026-09-16 — Sprint Wk 6 · Cloud+ Ch. 4
+- Cloud+ Ch. 4 (Networking) with labs and sims. Class assignments that came up, mostly small Python Projects
+
+## 2026-09-17 — Sprint Wk 6 · Cloud+ Ch. 5 + AWS Academy 3–4
+- Cloud+ Ch. 5 (Connectivity), all labs, sims and videos.
+- AWS Academy modules 3–4, IAM lab
+- Buisness Data Analytics 2 hour class video, assignments and quiz completed
+- DSA 1/5: Majority Element — Counter + walk the counts
