@@ -116,3 +116,17 @@ SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
 - AWS Academy modules 3–4, IAM lab
 - Buisness Data Analytics 2 hour class video, assignments and quiz completed
 - DSA 1/5: Majority Element — Counter + walk the counts
+
+## 2026-09-18 — Sprint Wk 6 · DSA 268 + 349
+- Completed DSA problems 268 and 349
+- Worked on C# Assignments and Class
+
+## 2026-09-19 — Sprint Wk 6 · DSA 125 + 283
+- Completed DSA problems 125 and 283
+- Filled out the remaining work forms for internship on Tuesday 9/22
+
+## 2026-09-20 — Sprint Wk 6 · Week 6 close
+- Day of Rest, Sister's 13th birthday
+
+## 2026-09-21 — Sprint Wk 7 · Throwaway API
+- Built the throwaway employees API: EmployeeCreate/Employee models, dict storage, POST/GET/GET-one/PUT/DELETE with 404s — all five working in /docs
