@@ -130,3 +130,10 @@ SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
 
 ## 2026-09-21 — Sprint Wk 7 · Throwaway API
 - Built the throwaway employees API: EmployeeCreate/Employee models, dict storage, POST/GET/GET-one/PUT/DELETE with 404s — all five working in /docs
+
+## 2026-09-22 — Sprint Wk 7 · Noteology Day 1
+- First day at Noteology (AI + Digital Optimization intern). Normalized and replaced:
+  - product photos on 42 of 46 candle products on the live Shopify store, verified all 42 on the storefront. Dry run → one product batch on every step.
+- Caught an AI quality review that passed bad output — full-res check found repeated flames, glowing labels, a garbled clock. Reworked prompts, approved 12 images.
+- Resume updated: finance CLI, pytest/FastAPI/Postgres skills, Noteology role, AWS cert in progress
+- DSA 1/5: Reverse String (#344) — two pointers, in-place swap
