@@ -133,7 +133,14 @@ SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
 
 ## 2026-09-22 — Sprint Wk 7 · Noteology Day 1
 - First day at Noteology (AI + Digital Optimization intern). Normalized and replaced:
-  - product photos on 42 of 46 candle products on the live Shopify store, verified all 42 on the storefront. Dry run → one product batch on every step.
+ - product photos on 42 of 46 candle products on the live Shopify store, verified all 42 on the storefront. Dry run → one product batch on every step.
 - Caught an AI quality review that passed bad output — full-res check found repeated flames, glowing labels, a garbled clock. Reworked prompts, approved 12 images.
 - Resume updated: finance CLI, pytest/FastAPI/Postgres skills, Noteology role, AWS cert in progress
 - DSA 1/5: Reverse String (#344) — two pointers, in-place swap
+
+## 2026-09-23 — Sprint Wk 7 · Inventory API kickoff
+- Created the inventory-api repo, uv project setup, app/ + tests/ structure
+- Wrote all 10 Pydantic models — products, manifests, users — three shapes each (Create / response / Update)
+- Design decisions: raw SQL over SQLAlchemy (noted in LATER.md), soft delete via status, default status NOT_AVAILABLE so nothing sells by accident, selling gets its own endpoint, PATCH over PUT for partial edits
+- Caught two security bugs in my own models: the response model was returning password_hash, then after the first fix it inherited the plaintext password. Split into UserBase / UserCreate / User / UserInDB. Separating essentially a one way traffic to enter user passwords and preventing it from being returned.
+- DSA 2/5: Squares of a Sorted Array (#977) — two pointers from both ends, filling the output back to front
