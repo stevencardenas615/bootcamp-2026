@@ -60,7 +60,7 @@ products
   product_name   TEXT           NOT NULL
   retail_price   NUMERIC(10,2)  NOT NULL
   list_price     NUMERIC(10,2)  NOT NULL
-  status         TEXT           NOT NULL  CHECK (status IN ('available', 'sold'))
+  status         TEXT           NOT NULL  CHECK (status IN ('available', 'sold', 'not_available', 'deleted'))
   sold_price     NUMERIC(10,2)  NULL
   sold_at        TIMESTAMP      NULL
 ```
@@ -69,7 +69,7 @@ products
 
 ```
 products(manifest_id)   — joins and per-manifest profit queries
-products(status)        — available vs. sold filters
+products(status)        — available, sold, not_available and deleted filters
 products(barcode)       — lookup by scan
 ```
 
