@@ -1,1 +1,2 @@
 - Learn it Yourself ML curriculum (https://lachinemearning.com/course.html) - revisit after Nov 1
+- SQLAlchemy ORM — deliberately skipped for inventory-api (Sep 23, 2026). Chose raw SQL with psycopg: schema is only 3 tables, SQL was fresh from week 5, and FastAPI + Postgres + JWT + coverage were already enough new things at once. Learn it after Nov 1; it's what most Python shops use.
