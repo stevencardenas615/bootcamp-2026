@@ -144,3 +144,17 @@ SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
 - Design decisions: raw SQL over SQLAlchemy (noted in LATER.md), soft delete via status, default status NOT_AVAILABLE so nothing sells by accident, selling gets its own endpoint, PATCH over PUT for partial edits
 - Caught two security bugs in my own models: the response model was returning password_hash, then after the first fix it inherited the plaintext password. Split into UserBase / UserCreate / User / UserInDB. Separating essentially a one way traffic to enter user passwords and preventing it from being returned.
 - DSA 2/5: Squares of a Sorted Array (#977) — two pointers from both ends, filling the output back to front
+
+## 2026-09-24 — Sprint Wk 7 · Noteology Day 2
+- 27/27 main product images and 28/28 lifestyle scenes live and verified on draft products; fixed 6 defective live images
+- Put the project under git, moved Shopify credentials to .env, added AI deny rules
+- Wrote highlighted_rows.py by hand
+- DSA: 
+
+## 2026-09-25 — Sprint Wk 7 · Noteology Day 3
+- Brand-learning assignment: Noteology + Olfactif customer walkthroughs, search and AI-visibility research
+- DSA: 26 Remove Duplicates from sorted array
+
+## 2026-09-26 — Sprint Wk 7 · Coursework
+- Class assignments, family time
+- DSA: 643 Max Average Subarray and 3 Longest Substring
