@@ -158,3 +158,12 @@ SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
 ## 2026-09-26 — Sprint Wk 7 · Coursework
 - Class assignments, family time
 - DSA: 643 Max Average Subarray and 3 Longest Substring
+
+## 2026-09-27 — Sprint Wk 7 · Applications + DB connection · Week 7 close
+- First 5 applications out: Guardian, Amazon, Qumulo, GM (long shots), GE HealthCare (first eligible one). Tailored cover letters for each. Started an application tracker.
+- Learned to read eligibility first: most big-company internships require bachelor's enrollment and a grad window I don't fit yet — the ESU transfer is what unlocks them.
+- Updated resume internship section and LinkedIn Profile
+- inventory-api: .env + .env.example, app/db.py with a FastAPI connection dependency (dict_row). App connected to Postgres on the VPS through the SSH tunnel.
+
+**Week 7 close:** models + DB connection done, 5 applications, DSA 5/5.
+Rolling to wk 8: schema.sql, first endpoints.
