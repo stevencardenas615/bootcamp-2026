@@ -167,3 +167,6 @@ SQL, SSH keys, Postgres on VPS, DSA thread started. Article 1 published,
 
 **Week 7 close:** models + DB connection done, 5 applications, DSA 5/5.
 Rolling to wk 8: schema.sql, first endpoints.
+
+## 2026-09-28 — Sprint Wk 8 · Rest day
+- Took the day off.
