@@ -170,3 +170,16 @@ Rolling to wk 8: schema.sql, first endpoints.
 
 ## 2026-09-28 — Sprint Wk 8 · Rest day
 - Took the day off.
+
+## 2026-09-29 — Sprint Wk 8 · Schema live + transfer plan
+- inventory-api: wrote schema.sql — users, manifests, products with identity
+  keys, foreign keys, CHECK on status, NUMERIC money — plus three indexes.
+  Ran it on the VPS with psql; all 3 tables and indexes live. Aligned model
+  date types with the SQL.
+- Transfer: built the ESU plan (rolling admission, fall 2027 decisions from
+  Jan 1), emailed transfer admissions and the Clear Path Scholarship office,
+  set up reminders in Hermes
+- Applications: re-checked eligibility and withdrew one application
+- Took a seasonal part-time job starting Oct 4 (Sun/Mon/Tue nights) — calendar
+  will stretch; replan Saturday
+- DSA 1/5: Two Sum II (#167) — two pointers on sorted input, no hash map needed
