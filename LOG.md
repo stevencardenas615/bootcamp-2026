@@ -194,3 +194,4 @@ Rolling to wk 8: schema.sql, first endpoints.
 - PATCH /products/{id}: dynamic UPDATE with psycopg.sql (only fields sent)
 - POST /products/{id}/sell: atomic UPDATE ... WHERE status='available', 404 vs 409
 - Fixed VS Code interpreter/workspace; learned editor warnings ≠ runtime errors
+- DSA 2/5: Contains Duplicate II (#219), hash map of number → last index
