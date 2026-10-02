@@ -183,3 +183,14 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Took a seasonal part-time job starting Oct 4 (Sun/Mon/Tue nights) — calendar
   will stretch; replan Saturday
 - DSA 1/5: Two Sum II (#167) — two pointers on sorted input, no hash map needed
+
+## 2026-09-30 — Sprint Wk 8 · Manifest endpoints
+- Inventory API: /health with DB connect timeout, seeded first user,
+  POST/GET/GET-by-id for /manifests (raw SQL, %s placeholders, RETURNING *, 404s)
+- Lined up recommendation letter writers for transfer scholarship
+
+## 2026-10-01 — Sprint Wk 8 · Product endpoints, PATCH, sell
+- Products: POST/GET/GET-by-id; caught ForeignKeyViolation → 400 instead of 500
+- PATCH /products/{id}: dynamic UPDATE with psycopg.sql (only fields sent)
+- POST /products/{id}/sell: atomic UPDATE ... WHERE status='available', 404 vs 409
+- Fixed VS Code interpreter/workspace; learned editor warnings ≠ runtime errors
