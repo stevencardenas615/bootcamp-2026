@@ -195,3 +195,10 @@ Rolling to wk 8: schema.sql, first endpoints.
 - POST /products/{id}/sell: atomic UPDATE ... WHERE status='available', 404 vs 409
 - Fixed VS Code interpreter/workspace; learned editor warnings ≠ runtime errors
 - DSA 2/5: Contains Duplicate II (#219), hash map of number → last index
+
+## 2026-10-04 — Sprint Wk 8 · Soft delete, filtering, registration
+- DELETE /products/{id} as soft delete (sold items protected → 409)
+- Lists hide deleted; ?status= filter (Enum query param → free 422)
+- GET /manifests/{id}/products with 404 vs empty [] distinction
+- Auth started: Argon2 hashing via pwdlib (security.py), POST /auth/register
+  with UniqueViolation → 409; hash never selected back out
