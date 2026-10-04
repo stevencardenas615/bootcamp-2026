@@ -200,5 +200,8 @@ Rolling to wk 8: schema.sql, first endpoints.
 - DELETE /products/{id} as soft delete (sold items protected → 409)
 - Lists hide deleted; ?status= filter (Enum query param → free 422)
 - GET /manifests/{id}/products with 404 vs empty [] distinction
-- Auth started: Argon2 hashing via pwdlib (security.py), POST /auth/register
-  with UniqueViolation → 409; hash never selected back out
+- Auth started: Argon2 hashing via pwdlib (security.py), POST /auth/register with UniqueViolation → 409; hash never selected back out
+- Auth: POST /auth/token login (OAuth2 form, verify Argon2 hash, 401 with no user enumeration) → signed JWT (HS256, 30-min exp, secret in .env)
+- get_current_user dependency + GET /auth/me; tested with /docs Authorize
+- DSA 3/5: Merge Sorted Array (#88), three pointers, fill from the back. Week 8 closed at 3/5.
+- Replanned the week around Amazon nights: Fri evening off, Mon/Tue 30-min days
