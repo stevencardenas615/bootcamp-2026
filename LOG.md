@@ -205,3 +205,8 @@ Rolling to wk 8: schema.sql, first endpoints.
 - get_current_user dependency + GET /auth/me; tested with /docs Authorize
 - DSA 3/5: Merge Sorted Array (#88), three pointers, fill from the back. Week 8 closed at 3/5.
 - Replanned the week around Amazon nights: Fri evening off, Mon/Tue 30-min days
+
+## 2026-10-07 — Sprint Wk 9 · Transfer thread
+- Submitted ESU transfer application (Fall 2027, CS) — a month ahead of target
+- Wrote and emailed Clear Path scholarship statement
+- Homework
