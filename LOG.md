@@ -210,3 +210,8 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Submitted ESU transfer application (Fall 2027, CS) — a month ahead of target
 - Wrote and emailed Clear Path scholarship statement
 - Homework
+
+## 2026-10-09 — Sprint Wk 9 · Auth wired in
+- DSA 1/5: Valid Palindrome II (#680), two pointers + one skip, try both with `or`
+- All inventory routes require a token (decorator dependencies); entered_by comes from the JWT user
+- Design call: everything protected except health/register/token — least privilege + audit trail
