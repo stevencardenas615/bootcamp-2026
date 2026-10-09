@@ -215,3 +215,6 @@ Rolling to wk 8: schema.sql, first endpoints.
 - DSA 1/5: Valid Palindrome II (#680), two pointers + one skip, try both with `or`
 - All inventory routes require a token (decorator dependencies); entered_by comes from the JWT user
 - Design call: everything protected except health/register/token — least privilege + audit trail
+- Test database (inventory_test) on the VPS; pytest + TestClient with get_db overridden
+- 9 auth tests green: register/409/422, login/401s, /me with and without token
+- Coverage baseline 69%; product + manifest routes are the gap
