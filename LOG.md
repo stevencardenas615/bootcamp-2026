@@ -218,3 +218,9 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Test database (inventory_test) on the VPS; pytest + TestClient with get_db overridden
 - 9 auth tests green: register/409/422, login/401s, /me with and without token
 - Coverage baseline 69%; product + manifest routes are the gap
+
+## 2026-10-10 — Sat · Family cookout, no bootcamp
+## 2026-10-11 — Sun · (whatever happened)
+## 2026-10-12 — Mon · Fell asleep after work; ESU: Kathi confirmed GPA won't exclude me, letters are the last piece; Amazon manager agreed to write one
+## 2026-10-13 — Tue · Amazon
+## 2026-10-14 — Wed · Dushok agreed to write a letter; picked up extra shift
