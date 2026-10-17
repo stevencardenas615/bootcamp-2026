@@ -220,7 +220,20 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Coverage baseline 69%; product + manifest routes are the gap
 
 ## 2026-10-10 — Sat · Family cookout, no bootcamp
-## 2026-10-11 — Sun · (whatever happened)
+## 2026-10-11 — Sun · Prepared for work
 ## 2026-10-12 — Mon · Fell asleep after work; ESU: Kathi confirmed GPA won't exclude me, letters are the last piece; Amazon manager agreed to write one
 ## 2026-10-13 — Tue · Amazon
 ## 2026-10-14 — Wed · Dushok agreed to write a letter; picked up extra shift
+
+## 2026-10-16 — Fri · Product tests, 88% coverage
+- test_products.py: 13 tests — default status, FK 400, auth 401, get/404, PATCH rules, sell once-only, delete rules, list hides deleted
+- Tests found a real bug: ProductCreate accepted status=sold → split ProductBase; create takes EditableStatus only
+- Coverage 69% → 88% (target was 80%); 22 tests total
+- Dwayne's recommendation letter is in (1 of 3)
+
+## 2026-10-17 — Sat (early AM) · Cleanup
+- PATCH refuses sold products (409) + test; 23 tests green
+- Refactor: main.py split into routers/auth, manifests, products + deps.py; main.py is 14 lines
+- Router-level auth dependency replaces per-route copies
+- Connection[dict] everywhere; timestamp → timestamptz in schema and both DBs
+- SSH keepalive added after the tunnel dropped mid-run
