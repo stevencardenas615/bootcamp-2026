@@ -237,3 +237,13 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Router-level auth dependency replaces per-route copies
 - Connection[dict] everywhere; timestamp → timestamptz in schema and both DBs
 - SSH keepalive added after the tunnel dropped mid-run
+
+## 2026-10-18 — Sun · Inventory API deployed
+- Replanned: Wed rest; Thu/Fri/Sat are project blocks; Sun–Tue Amazon 30-min days
+- Dockerized the API (uv-based image, .dockerignore keeps .env out), compose.yml with Traefik labels
+- Found nginx was wrong for this box: Traefik (host network, Let's Encrypt) already owns 80/443
+- Container on host network → Postgres stays localhost; Traefik routes api.scardenas.tech with a real cert
+- https://api.scardenas.tech/health → ok. Project checklist complete: VPS-deployed, JWT, 88% coverage
+- Bots probed the hostname within a minute of the cert; hardening is next
+- Hardened the VPS: non-root sudo user with key, ufw (22/80/443 only), key-only SSH, root login disabled
+- GitHub Actions CI: tests run against a Postgres service on every push; green on first run
