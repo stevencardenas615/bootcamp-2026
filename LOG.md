@@ -266,4 +266,5 @@ Rolling to wk 8: schema.sql, first endpoints.
 ## 2026-10-23 — Fri · Rest
 
 ## 2026-10-24 — Sat · API security fix + Job Tracker kickoff
-- (fill in at the end of tonight)
+- API: registration closed behind ALLOW_REGISTRATION (default off); 24 tests, CI green, deployed; 403 verified live
+- Job Tracker kickoff: Saturday questions, schema (applications + status_events, CHECKs, FK, 5 indexes), jobtracker DB created on VPS
