@@ -247,3 +247,23 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Bots probed the hostname within a minute of the cert; hardening is next
 - Hardened the VPS: non-root sudo user with key, ufw (22/80/443 only), key-only SSH, root login disabled
 - GitHub Actions CI: tests run against a Postgres service on every push; green on first run
+
+## 2026-10-19 — Mon · Applications
+- Applied: Navy Federal (Mobile Developer, San Diego), CACI (remote); wrote the Navy Federal cover letter
+- Reviewed all US Amazon tech internships: all SDE roles require a bachelor's; Data Engineer intern is the one that fits
+- 15 applications out total
+
+## 2026-10-20 — Tue · Amazon
+- 30-min day (shift)
+
+## 2026-10-21 — Wed · Rest
+
+## 2026-10-22 — Thu · Applications + transfer plan B
+- Applied: GDIT (Bossier City), Epic Games (backend), Lumen (remote data); three tailored cover letters. 20 out.
+- Clear Path funding at ESU ran out; researched transfer options (Bloomsburg, ESU, WGU, Penn State) and PASSHE Pledge
+- Emailed Prof. Saporito, Bloomsburg admissions, ESU transfer center, LCCC financial aid (SAP)
+
+## 2026-10-23 — Fri · Rest
+
+## 2026-10-24 — Sat · API security fix + Job Tracker kickoff
+- (fill in at the end of tonight)
