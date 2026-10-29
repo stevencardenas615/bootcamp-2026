@@ -280,3 +280,8 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Bootcamp coaching handed to the hub's shared state (Priorities.md / handoff); session continues from handoff §3
 - ESU: director confirmed recalculated GPA counts at acceptance; Admissions still has no LCCC transcript → order official copy Thu
 - Sent updated transcript to Clear Path; replied to Saporito (Calc I + Data Structures swap, CIS-299); Hy-Vee + Epic rejected (tracker updated)
+
+## 2026-10-29 — Thu · Internship + transfer admin
+- Ordered official LCCC transcript to ESU Admissions online; Garraway follow-up sent
+- Clear Path letters: Dushok confirmed received, Dwayne's found in spam, Derek Quitos still missing
+- No code today
