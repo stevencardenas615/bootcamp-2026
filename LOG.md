@@ -268,3 +268,15 @@ Rolling to wk 8: schema.sql, first endpoints.
 ## 2026-10-24 — Sat · API security fix + Job Tracker kickoff
 - API: registration closed behind ALLOW_REGISTRATION (default off); 24 tests, CI green, deployed; 403 verified live
 - Job Tracker kickoff: Saturday questions, schema (applications + status_events, CHECKs, FK, 5 indexes), jobtracker DB created on VPS
+
+## 2026-10-25 — Sun · Bootcamp day (Sat session ran to 1:45 AM: registration lock + Job Tracker schema commits land here)
+
+## 2026-10-26 — Mon · Off (admin only)
+- Transcript shows cumulative 3.0 after academic forgiveness; GDIT rejected (location); tracker updated, 6 GPA-gated postings reopened
+
+## 2026-10-27 — Tue · Off
+
+## 2026-10-28 — Wed · Off, transfer + applications admin
+- Bootcamp coaching handed to the hub's shared state (Priorities.md / handoff); session continues from handoff §3
+- ESU: director confirmed recalculated GPA counts at acceptance; Admissions still has no LCCC transcript → order official copy Thu
+- Sent updated transcript to Clear Path; replied to Saporito (Calc I + Data Structures swap, CIS-299); Hy-Vee + Epic rejected (tracker updated)
