@@ -290,4 +290,6 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Applied: Lowe's, Intuit (Cybersecurity), Pilot (App Dev), Wawa (IT Dev); 24 out. GE HealthCare + Home Depot postings gone
 - Job Tracker: uv deps added, app/ + tests/ created, uv init main.py removed
 - Found jobtracker DB held inventory-api tables (wrong ~/schema.sql loaded Oct 24). Dropped + recreated jobtracker and jobtracker_test from ~/jobtracker-schema.sql; \dt verified on both
-- Next: commit the scaffold, then db.py + .env, models.py, first POST /applications test
+- db.py (verified: count 0 through the tunnel), models.py (Status, Source, ApplicationCreate, Application mirror the schema), .env + .env.example
+- Auth decision: API key (X-API-Key, secrets.compare_digest) instead of users + JWT; JWT_SECRET and ALLOW_REGISTRATION dropped
+- Next (Sat 8 AM): push last commit, write app/deps.py, then POST /applications + first test
