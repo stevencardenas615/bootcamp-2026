@@ -285,3 +285,9 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Ordered official LCCC transcript to ESU Admissions online; Garraway follow-up sent
 - Clear Path letters: Dushok confirmed received, Dwayne's found in spam, Derek Quitos still missing
 - No code today
+
+## 2026-10-30 — Fri · Applications + Job Tracker DB fix (session ran past 1 AM)
+- Applied: Lowe's, Intuit (Cybersecurity), Pilot (App Dev), Wawa (IT Dev); 24 out. GE HealthCare + Home Depot postings gone
+- Job Tracker: uv deps added, app/ + tests/ created, uv init main.py removed
+- Found jobtracker DB held inventory-api tables (wrong ~/schema.sql loaded Oct 24). Dropped + recreated jobtracker and jobtracker_test from ~/jobtracker-schema.sql; \dt verified on both
+- Next: commit the scaffold, then db.py + .env, models.py, first POST /applications test
