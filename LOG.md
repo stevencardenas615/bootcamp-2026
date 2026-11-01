@@ -293,3 +293,8 @@ Rolling to wk 8: schema.sql, first endpoints.
 - db.py (verified: count 0 through the tunnel), models.py (Status, Source, ApplicationCreate, Application mirror the schema), .env + .env.example
 - Auth decision: API key (X-API-Key, secrets.compare_digest) instead of users + JWT; JWT_SECRET and ALLOW_REGISTRATION dropped
 - Next (Sat 8 AM): push last commit, write app/deps.py, then POST /applications + first test
+
+## 2026-10-31 — Sat · Applications + Halloween with family
+- Applied: Papa John's (Digital Dev), Immuta (Full-Stack), Workshop (SWE, Omaha); 27 out. Corewell Health posting gone
+- Q2 Workday anti-nepotism task done
+- Saturday code block skipped for Halloween with family; Job Tracker session moved to after midnight
