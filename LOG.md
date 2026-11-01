@@ -298,3 +298,11 @@ Rolling to wk 8: schema.sql, first endpoints.
 - Applied: Papa John's (Digital Dev), Immuta (Full-Stack), Workshop (SWE, Omaha); 27 out. Corewell Health posting gone
 - Q2 Workday anti-nepotism task done
 - Saturday code block skipped for Halloween with family; Job Tracker session moved to after midnight
+
+## 2026-11-01 — Sun (1–3 AM) · Job Tracker: auth + first failing test
+- app/deps.py: verify_api_key (APIKeyHeader "X-API-Key", secrets.compare_digest, 401 on mismatch); import check passed
+- main.py (bare app), tests/conftest.py (test DB override, TRUNCATE applications + status_events, auth_headers from .env), test_create_application_defaults_saved: red on 404 as intended
+- Key showed up in pytest output → rotated API_KEY, added --tb=short so fixtures stop printing
+- New ground: server and client must agree on names (header, fields, paths); REST paths are plural nouns
+- Tracker: second Pilot role logged, 28 out. DSA 0/5 this week
+- Next: push job-tracker, app/routers/applications.py (POST /applications, INSERT ... RETURNING *, 201), include_router in main.py → green
